@@ -1,0 +1,19 @@
+<div class="navigation">
+  <div class="navigation__view">
+    <ng-content></ng-content>
+  </div>
+  <div class="navigation__bar">
+    <ol class="navigation__list">
+      <li
+        class="navigation__list__item"
+        *ngFor="let item of navItems; let i = index"
+      >
+        <a
+          [routerLink]="item.link"
+          [routerLinkActive]="['navigation__list__item--active']"
+          ><i class="eva" [ngClass]="item.icon"></i>{{ item.text }}</a
+        >
+      </li>
+    </ol>
+  </div>
+</div>
