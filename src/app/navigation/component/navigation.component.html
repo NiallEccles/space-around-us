@@ -1,9 +1,9 @@
 <div class="navigation">
-  <div class="navigation__view">
+  <div class="navigation__view" [ngClass]="{'onboarding': onBoarding}">
     <ng-content></ng-content>
   </div>
   <div class="navigation__bar">
-    <ol class="navigation__list">
+    <ol class="navigation__list" [ngClass]="{'onboarding': onBoarding}">
       <li
         class="navigation__list__item"
         *ngFor="let item of navItems; let i = index"
